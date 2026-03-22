@@ -12,14 +12,14 @@
   <!-- Open Graph -->
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Oliver Zimmermann — Security Manager & SecOps Automation" />
-  <meta property="og:description" content="Building automation that keeps security teams ahead of the threat. Security Manager at LBBW, former SecOps Automation Lead at Mercedes-Benz." />
+  <meta property="og:description" content="Security Manager at LBBW. Four years building SOC automation infrastructure at Mercedes-Benz. Open-source security tools author." />
   <meta property="og:url" content="https://ozimmermann.com" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Oliver Zimmermann — Security Manager & SecOps Automation" />
-  <meta name="twitter:description" content="Building automation that keeps security teams ahead of the threat. Security Manager at LBBW, former SecOps Automation Lead at Mercedes-Benz." />
+  <meta name="twitter:description" content="Security Manager at LBBW. Four years building SOC automation infrastructure at Mercedes-Benz. Open-source security tools author." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -351,6 +351,11 @@
       display: inline-block;
     }
 
+    .tag--cert {
+      border-left: 2px solid var(--accent);
+      padding-left: 0.6rem;
+    }
+
     /* PROJECTS */
     .projects-grid {
       display: grid;
@@ -407,6 +412,32 @@
       color: var(--accent-light);
     }
 
+    .project-tag {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+    }
+
+    /* NAV TOGGLE (hamburger) */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
     /* FOOTER */
     footer {
       text-align: center;
@@ -416,6 +447,22 @@
       color: var(--muted);
       border-top: 1px solid var(--border);
       letter-spacing: 0.05em;
+    }
+
+    .footer-contact {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-contact .contact-link {
+      font-size: 0.8rem;
+    }
+
+    .footer-copy {
+      color: var(--muted);
     }
 
     /* RESPONSIVE */
@@ -428,7 +475,20 @@
     @media (max-width: 640px) {
       nav { padding: 1rem 1.25rem; }
       .nav-name { font-size: 0.8rem; }
-      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: rgba(249,249,247,0.97);
+        flex-direction: column;
+        padding: 1rem 1.25rem 1.5rem;
+        border-bottom: 1px solid var(--border);
+        gap: 1rem;
+        backdrop-filter: blur(8px);
+      }
+      .nav-links.open { display: flex; }
       .hero { padding: 5rem 1.25rem 3rem; min-height: auto; }
       main { padding: 0 1.25rem 4rem; }
       .hero h1 { font-size: 2.8rem; }
@@ -439,6 +499,7 @@
       .edu-item { grid-template-columns: 1fr; }
       .edu-period { text-align: left; }
       section { margin-bottom: 4rem; }
+      .footer-contact { gap: 1rem; }
     }
   </style>
 </head>
@@ -446,12 +507,15 @@
 
   <nav>
     <span class="nav-name">Oliver Zimmermann</span>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
     </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <div class="hero">
@@ -460,7 +524,7 @@
       <h1>Oliver<br>Zimmermann</h1>
       <p class="hero-subtitle">Security Manager · Stuttgart, Germany</p>
       <p class="hero-summary">
-        Building automation that keeps security teams ahead of the threat.
+        Security Manager at LBBW, previously SecOps Automation Lead at Mercedes-Benz. Been automating repetitive work since ZF — just the threat landscape changed.
       </p>
       <div class="hero-contact">
         <a href="mailto:outpost_fleshed66@icloud.com?body=(The%20unusual%20email%20address%20is%20a%20privacy%20proxy%20to%20protect%20against%20spam%20%E2%80%94%20your%20message%20will%20reach%20me%20directly.)%0A%0A" class="contact-link">
@@ -590,7 +654,7 @@
           <div class="project-name">Drohnenwetter</div>
           <p class="project-desc">Real-time flight condition checker for drone pilots in Germany — evaluates wind, temperature, dew point, and geomagnetic activity against hardware limits, with live airspace overlays.</p>
           <div class="project-meta">
-            <span></span>
+            <span class="project-tag">Web App · Live</span>
             <span class="project-url">drohnenwetter.de</span>
           </div>
         </a>
@@ -599,7 +663,7 @@
           <div class="project-name">Phishnet</div>
           <p class="project-desc">Threat intelligence tool that hunts phishing kit archives across feeds, extracts infrastructure metadata, and stores findings for research and analysis.</p>
           <div class="project-meta">
-            <span></span>
+            <span class="project-tag">Threat Intel · Live</span>
             <span class="project-url">phishnet.cc</span>
           </div>
         </a>
@@ -688,11 +752,11 @@
         <div>
           <div class="skills-col-title">Certifications</div>
           <div class="tag-list">
-            <span class="tag">GIAC Cloud Penetration Tester (GCPN)</span>
-            <span class="tag">GIAC Web Application Penetration Tester (GWAPT)</span>
-            <span class="tag">GIAC Python Coder (GPYC)</span>
-            <span class="tag">LPIC-1 Linux Administrator</span>
-            <span class="tag">IHK Instructor/Trainer (AEVO)</span>
+            <span class="tag tag--cert">GIAC Cloud Penetration Tester (GCPN)</span>
+            <span class="tag tag--cert">GIAC Web Application Penetration Tester (GWAPT)</span>
+            <span class="tag tag--cert">GIAC Python Coder (GPYC)</span>
+            <span class="tag tag--cert">LPIC-1 Linux Administrator</span>
+            <span class="tag tag--cert">IHK Instructor/Trainer (AEVO)</span>
           </div>
         </div>
         <div>
@@ -708,7 +772,21 @@
   </main>
 
   <footer>
-    &copy; 2026 Oliver Zimmermann · Stuttgart, Germany
+    <div class="footer-contact">
+      <a href="mailto:outpost_fleshed66@icloud.com?body=(The%20unusual%20email%20address%20is%20a%20privacy%20proxy%20to%20protect%20against%20spam%20%E2%80%94%20your%20message%20will%20reach%20me%20directly.)%0A%0A" class="contact-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        E-Mail
+      </a>
+      <a href="https://www.linkedin.com/in/zimmermann-oliver" target="_blank" rel="noopener" class="contact-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/olizimmermann" target="_blank" rel="noopener" class="contact-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Oliver Zimmermann · Stuttgart, Germany</div>
   </footer>
 
   <script>
@@ -716,6 +794,11 @@
       .then(r => r.json())
       .then(d => { if (d.stargazers_count !== undefined) document.getElementById('s3dns-stars').textContent = d.stargazers_count; })
       .catch(() => {});
+
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
   </script>
 </body>
 </html>
