@@ -4,22 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oliver Zimmermann — Security Manager & SecOps Automation</title>
-  <meta name="description" content="Oliver Zimmermann is a Security Manager and SecOps Automation expert based in Stuttgart, Germany. Specializing in incident response, SIEM/SOAR, cloud security, and security automation." />
-  <meta name="keywords" content="Oliver Zimmermann, Security Manager, SecOps, SOC Automation, SIEM, SOAR, Incident Response, Cloud Security, Penetration Testing, Stuttgart, LBBW, Mercedes-Benz" />
+  <meta name="description" content="Oliver Zimmermann is a Security Manager and SecOps Automation expert based in Stuttgart, Germany. CISSP. Specializing in SOC operations, threat hunting, SIEM/SOAR, cloud security, and security automation." />
+  <meta name="keywords" content="Oliver Zimmermann, Security Manager, SecOps, SOC Automation, SIEM, SOAR, Incident Response, Threat Hunting, CISSP, DORA, Cloud Security, Penetration Testing, Stuttgart, LBBW, Mercedes-Benz" />
   <meta name="author" content="Oliver Zimmermann" />
   <link rel="canonical" href="https://ozimmermann.com" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Oliver Zimmermann — Security Manager & SecOps Automation" />
-  <meta property="og:description" content="Security Manager at LBBW. Four years building SOC automation infrastructure at Mercedes-Benz. Open-source security tools author." />
+  <meta property="og:description" content="CISSP · Security Manager responsible for the LBBW SOC. Previously built the SOC automation framework at Mercedes-Benz. Phishing infrastructure researcher and open-source security tools author." />
   <meta property="og:url" content="https://ozimmermann.com" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Oliver Zimmermann — Security Manager & SecOps Automation" />
-  <meta name="twitter:description" content="Security Manager at LBBW. Four years building SOC automation infrastructure at Mercedes-Benz. Open-source security tools author." />
+  <meta name="twitter:description" content="CISSP · Security Manager responsible for the LBBW SOC. Previously built the SOC automation framework at Mercedes-Benz. Phishing infrastructure researcher and open-source security tools author." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -37,7 +37,12 @@
       "https://github.com/olizimmermann",
       "https://www.credly.com/users/zimmermann/badges/credly"
     ],
-    "knowsAbout": ["SecOps Automation", "Incident Response", "SIEM", "SOAR", "Cloud Security", "Penetration Testing", "Python"]
+    "knowsAbout": ["SecOps Automation", "Incident Response", "Threat Hunting", "Detection Engineering", "SIEM", "SOAR", "Cloud Security", "Penetration Testing", "Phishing Infrastructure", "DORA", "Python"],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "Certified Information Systems Security Professional (CISSP)", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "ISC2" } },
+      { "@type": "EducationalOccupationalCredential", "name": "GIAC Cloud Penetration Tester (GCPN)", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "GIAC" } },
+      { "@type": "EducationalOccupationalCredential", "name": "GIAC Web Application Penetration Tester (GWAPT)", "credentialCategory": "certification", "recognizedBy": { "@type": "Organization", "name": "GIAC" } }
+    ]
   }
   </script>
   <style>
@@ -294,6 +299,20 @@
     }
 
     .edu-item:last-child { margin-bottom: 0; }
+
+    .edu-thesis {
+      margin-top: 0.35rem;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .research-intro {
+      max-width: 46rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .skills-col-title--spaced { margin-top: 2rem; }
 
     .edu-school {
       font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -572,7 +591,17 @@
         </div>
         <div class="job-title">Security Manager</div>
         <div class="job-location">Stuttgart, Germany</div>
-        <p class="job-desc">Security Manager for the LBBW Security Operations Center</p>
+        <p class="job-desc">Security Operations Center (SOC)</p>
+        <ul class="job-bullets">
+          <li>Responsible for the bank's SOC, covering bank-wide security monitoring and the continuous development of detection and response capabilities</li>
+          <li>Steer the external security service provider as decentralised outsourcing manager, covering change management and review of detection quality, timeliness, and service delivery</li>
+          <li>Define detection requirements, propose detection ideas, and drive tuning with the use case engineers</li>
+          <li>Evaluate and select a SOAR platform, covering use-case prioritisation, integration architecture, and build-vs-buy assessment, my second enterprise-scale SOAR selection after Mercedes-Benz</li>
+          <li>Perform threat hunting, escalated case work, and evidence gathering in the SIEM</li>
+          <li>Support log source onboarding and monitoring of data source health</li>
+          <li>Support security incidents across the London, New York, and Singapore branches as head office, aligning with group standards and expanding monitoring coverage</li>
+          <li>Operate in a regulated environment: third-party risk management, MaRisk, and DORA</li>
+        </ul>
       </div>
 
       <div class="job">
@@ -581,17 +610,27 @@
           <span class="job-period">Sep 2018 — Sep 2025</span>
         </div>
 
-        <div class="job-title">Security Engineer — SecOps Automation Lead</div>
-        <div class="job-location">Stuttgart, Germany · Sep 2021 — Sep 2025</div>
+        <div class="job-title">SecOps Automation Lead Engineer</div>
+        <div class="job-location">Stuttgart, Germany · Apr 2024 — Sep 2025</div>
         <p class="job-desc">Global Cyber Security · Cyber Intelligence and Response Center (CIRC)</p>
         <ul class="job-bullets">
           <li>Led a distributed team of Security Automation Engineers across Germany, Singapore, and Toronto</li>
-          <li>Developed and implemented an automation framework underpinning the entire SOC</li>
-          <li>Built a phishing email analysis pipeline processing 1,000+ emails/day with &gt;90% automation</li>
-          <li>Designed custom SIEM dashboards and introduced a SOAR platform</li>
-          <li>Supported incident management during critical security events</li>
-          <li>Contributed to CNAP onboarding for cloud security</li>
+          <li>Owned the SOC automation framework and its roadmap, scaling automation across security use cases</li>
+          <li>Evaluated, introduced, and integrated a SOAR platform</li>
+          <li>Contributed to CNAPP onboarding to secure cloud environments</li>
         </ul>
+
+        <div class="sub-role">
+          <div class="job-title">Security Engineer</div>
+          <div class="job-location">Stuttgart, Germany · Oct 2021 — Mar 2024</div>
+          <p class="job-desc">Global Cyber Security · Cyber Intelligence and Response Center (CIRC)</p>
+          <ul class="job-bullets">
+            <li>Designed and implemented the automation framework underpinning the entire SOC</li>
+            <li>Built a phishing email analysis pipeline processing 1,000+ emails/day with &gt;90% automation and response within minutes</li>
+            <li>Developed custom SIEM dashboards and features via a custom application</li>
+            <li>Provided analysts with specialised tooling and supported incident management during security incidents</li>
+          </ul>
+        </div>
 
         <div class="sub-role">
           <div class="job-title">Corporate Student</div>
@@ -639,16 +678,18 @@
         <div class="sub-role">
           <div class="job-title">Electronics Technician for Automation</div>
           <div class="job-location">Friedrichshafen · Sep 2011 — Jan 2014</div>
-        </div>
-      </div> -->
+        </div> -->
+      </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects">
       <div class="section-header">
-        <span class="section-label">Open Source</span>
+        <span class="section-label">Research &amp; Open Source</span>
         <div class="section-line"></div>
       </div>
+
+      <p class="job-desc research-intro">Outside of work, I research phishing infrastructure and phishing-as-a-service attribution, and publish open-source security tooling. I also do bug bounty and coordinated vulnerability disclosure.</p>
 
       <div class="projects-grid">
         <a href="https://github.com/olizimmermann/s3dns" target="_blank" rel="noopener" class="project-card">
@@ -701,6 +742,7 @@
           <a href="https://www.hs-aalen.de" target="_blank" rel="noopener" class="edu-school">Aalen University</a>
           <div class="edu-degree">M.Sc. IT Security Management – Cyber Crime</div>
           <div class="job-location">Aalen, Germany</div>
+          <p class="edu-thesis">Thesis: tracking phishing kit lineage across rebranding events</p>
         </div>
         <div class="edu-period">2024 — 2026</div>
       </div>
@@ -755,8 +797,11 @@
           <div class="tag-list">
             <span class="tag">Incident Response</span>
             <span class="tag">Incident Management</span>
+            <span class="tag">Threat Hunting</span>
+            <span class="tag">Detection Engineering</span>
             <span class="tag">SecOps Automation</span>
             <span class="tag">SIEM / SOAR</span>
+            <span class="tag">DORA / MaRisk</span>
             <span class="tag">Penetration Testing</span>
             <span class="tag">Cloud Security</span>
             <span class="tag">Python</span>
@@ -779,6 +824,11 @@
           <div class="tag-list">
             <span class="tag">German — Native</span>
             <span class="tag">English — Professional</span>
+            <span class="tag">Spanish — Elementary</span>
+          </div>
+          <div class="skills-col-title skills-col-title--spaced">Outside Work</div>
+          <div class="tag-list">
+            <span class="tag">Volunteer Firefighter</span>
           </div>
         </div>
       </div>
