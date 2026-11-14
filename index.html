@@ -34,7 +34,8 @@
     "address": { "@type": "PostalAddress", "addressLocality": "Stuttgart", "addressCountry": "DE" },
     "sameAs": [
       "https://www.linkedin.com/in/zimmermann-oliver",
-      "https://github.com/olizimmermann"
+      "https://github.com/olizimmermann",
+      "https://www.credly.com/users/zimmermann/badges/credly"
     ],
     "knowsAbout": ["SecOps Automation", "Incident Response", "SIEM", "SOAR", "Cloud Security", "Penetration Testing", "Python"]
   }
@@ -355,6 +356,18 @@
       border-left: 2px solid var(--accent);
       padding-left: 0.6rem;
     }
+
+    .cert-verify {
+      display: inline-block;
+      margin-top: 0.85rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .cert-verify:hover { color: var(--accent); }
 
     /* PROJECTS */
     .projects-grid {
@@ -752,12 +765,14 @@
         <div>
           <div class="skills-col-title">Certifications</div>
           <div class="tag-list">
+            <span class="tag tag--cert">Certified Information Systems Security Professional (CISSP)</span>
             <span class="tag tag--cert">GIAC Cloud Penetration Tester (GCPN)</span>
             <span class="tag tag--cert">GIAC Web Application Penetration Tester (GWAPT)</span>
             <span class="tag tag--cert">GIAC Python Coder (GPYC)</span>
             <span class="tag tag--cert">LPIC-1 Linux Administrator</span>
             <span class="tag tag--cert">IHK Instructor/Trainer (AEVO)</span>
           </div>
+          <a href="https://www.credly.com/users/zimmermann/badges/credly" target="_blank" rel="noopener" class="cert-verify">Verify on Credly →</a>
         </div>
         <div>
           <div class="skills-col-title">Languages</div>
