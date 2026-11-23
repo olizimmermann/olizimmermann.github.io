@@ -1,0 +1,4 @@
+Contact: mailto:outpost_fleshed66@icloud.com
+Expires: 2027-11-23T00:00:00.000Z
+Preferred-Languages: en, de
+Canonical: https://ozimmermann.com/.well-known/security.txt
