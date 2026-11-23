@@ -7,29 +7,47 @@
   <meta name="description" content="Oliver Zimmermann is a Security Manager and SecOps Automation expert based in Stuttgart, Germany. CISSP. Specializing in SOC operations, threat hunting, SIEM/SOAR, cloud security, and security automation." />
   <meta name="keywords" content="Oliver Zimmermann, Security Manager, SecOps, SOC Automation, SIEM, SOAR, Incident Response, Threat Hunting, CISSP, DORA, Cloud Security, Penetration Testing, Stuttgart, LBBW, Mercedes-Benz" />
   <meta name="author" content="Oliver Zimmermann" />
-  <link rel="canonical" href="https://ozimmermann.com" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1e3a4f" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://ozimmermann.com/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Oliver Zimmermann — Security Manager & SecOps Automation" />
   <meta property="og:description" content="CISSP · Security Manager responsible for the LBBW SOC. Previously built the SOC automation framework at Mercedes-Benz. Phishing infrastructure researcher and open-source security tools author." />
-  <meta property="og:url" content="https://ozimmermann.com" />
+  <meta property="og:url" content="https://ozimmermann.com/" />
+  <meta property="og:site_name" content="Oliver Zimmermann" />
+  <meta property="og:image" content="https://ozimmermann.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Oliver Zimmermann, Security Manager and CISSP" />
+  <meta property="profile:first_name" content="Oliver" />
+  <meta property="profile:last_name" content="Zimmermann" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Oliver Zimmermann — Security Manager & SecOps Automation" />
   <meta name="twitter:description" content="CISSP · Security Manager responsible for the LBBW SOC. Previously built the SOC automation framework at Mercedes-Benz. Phishing infrastructure researcher and open-source security tools author." />
+  <meta name="twitter:image" content="https://ozimmermann.com/og-image.png" />
+  <meta name="twitter:image:alt" content="Oliver Zimmermann, Security Manager and CISSP" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://ozimmermann.com/#person",
     "name": "Oliver Zimmermann",
+    "givenName": "Oliver",
+    "familyName": "Zimmermann",
+    "image": "https://ozimmermann.com/og-image.png",
     "jobTitle": "Security Manager",
     "worksFor": { "@type": "Organization", "name": "LBBW" },
-    "url": "https://ozimmermann.com",
+    "url": "https://ozimmermann.com/",
     "email": "outpost_fleshed66@icloud.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Stuttgart", "addressCountry": "DE" },
     "sameAs": [
@@ -854,16 +872,6 @@
     <div class="footer-copy">&copy; 2026 Oliver Zimmermann · Stuttgart, Germany</div>
   </footer>
 
-  <script>
-    fetch('https://api.github.com/repos/olizimmermann/s3dns')
-      .then(r => r.json())
-      .then(d => { if (d.stargazers_count !== undefined) document.getElementById('s3dns-stars').textContent = d.stargazers_count; })
-      .catch(() => {});
-
-    const toggle = document.getElementById('nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-  </script>
+  <script src="/main.js" defer></script>
 </body>
 </html>
